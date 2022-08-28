@@ -1,0 +1,399 @@
+@import 'global';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$font-stack: 'Poppins', sans-serif;
+$primary-color: #ffffff;
+$secondary-color: #ec8080;
+$terciary-color: #eb6969;
+$shadow-color: #f8b1b1;
+
+$gradient: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+$text-color-light:  #ffffff;
+$text-color-medium: #868484;
+$text-color-dark:  #000000;
+
+$filter-pic: grayscale(90%) invert(15%);
+
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// General Styling
+// General Styling
+html,
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h3 { font-size: 2.8rem; }
+
+.title{
+  font-size: 3rem;
+  padding: 1% 0;
+  font-weight: bold;
+  background: transparent;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: $text-color-medium;
+}
+
+// Menu
+.logo{
+  width:100px;
+  height:20px;
+  margin-bottom: 16%;
+}
+
+header{
+  position:fixed;
+  top:0;
+  border-top: 30px solid $terciary-color;
+  width:100%;
+  background-color: $terciary-color;
+}
+
+.wrapper{
+  background-color: transparent;
+  padding-top: 100px;
+  padding-bottom:100px;
+}
+
+// Example Nesting
+
+nav{
+  @include container-flex(space-between, center, nowrap);
+  background-color: $terciary-color;
+  height: 25px;
+  width: 100%;
+  padding: 0% 5%;
+  ul{
+      display:flex;
+      padding:0;
+      margin-bottom: 2%;
+
+      a{
+          padding: 10px;
+          font-size: 1.6rem;
+          font-weight:bold;
+          color: $text-color-light;
+      }
+
+      a:hover{
+          transform: scale(1.1);
+          color: $text-color-medium;
+      }
+  }
+}
+
+// COLOR SECTIONS
+
+.bg-color{
+  background-color: $secondary-color;
+}
+// MAIN
+.main-section {
+//  css for background img didnt worked (dkw), so i put it inline
+  background-position: center;
+  height: 600px;
+  color: $primary-color;
+  text-align: center;
+  padding: 15% 5%;
+}
+.main-text{
+  background-color: $shadow-color;
+  background: repeating-radial-gradient(circle, transparent, transparent 3.5px, #fb8686 3.5px, #fb8686 4.5px), repeating-radial-gradient(circle, transparent, transparent 3.5px, #f47585 3.5px, #f47585 4.5px), #f8b1b1;
+background-size: 20px 20px;
+background-position: 0 0, 10px 10px, 20px 10px;
+  opacity: 95%;
+  padding: 10% 3%;
+  width: 50%;
+  height: auto;
+  border-radius: 5px 5px;
+
+}
+
+.btn-main{
+  padding: 5%;
+  box-shadow: 5px 5px $shadow-color;
+  opacity: 100%;
+}
+
+
+.title-main{
+  font-size: 5rem;
+}
+// CARD
+
+.card{
+  width: 300px;
+  background-color: $secondary-color;
+  border-radius: 7%;
+  margin: -3% 5%;
+  padding: 2%;
+  i{
+    padding: 10% 5%;
+  }
+
+  h3{
+    font-size: 2rem;
+    color: $text-color-light;
+  }
+}
+
+.service-type{
+  :hover{ 
+    background-image: $gradient;
+  }
+}
+
+//PRESENTATION
+.flex-section{
+  @include container-flex(space-between, center, nowrap);
+}
+
+.presentation{
+    
+  padding-top: 6%;
+ margin-bottom: 3%;
+  
+  .flex-item2{
+      text-align: right;
+  }
+  
+  h2{
+    margin-bottom: 10%;
+    width: 150%;
+  }
+
+  p{
+      // padding-right: 20px;
+      width: 100%;
+      padding-right: 10px;
+      padding-bottom: 10%;
+  }
+  .flex-item1{
+    width: 80%;
+  }
+}
+
+// Services
+.services{
+  div{
+      text-align: center;
+  }
+
+  .service-type{
+      @include container-flex(center, center, nowrap);
+      i{
+          font-size: 4rem;
+          color: $primary-color;
+      }
+      h3{
+        font-weight: bold;
+      }
+      p{
+        color: $text-color-light;
+        margin: 10% 0;
+      }
+  }
+}
+
+// ABOUT
+
+.about{
+  padding: 3% 10%;
+}
+.about-img{
+  width: 400px;
+  height: auto;
+  border: 10px solid $terciary-color;
+  box-shadow: -10px 10px 10px $shadow-color;
+  padding: 4%;
+  margin-right: 4%;
+  &:hover{
+    border-radius: 50%;
+  }
+}
+
+.about-text{
+  // padding: 0 10%;
+  margin: -4% 4%;
+  text-align: right;
+  width: 70%;
+  color: $text-color-light;
+  p{ color: $text-color-light;
+    margin: 3% 0;
+  }
+}
+
+// Gallery
+
+.gallery-bg {
+	text-align: center;
+  padding: 3% 0;
+  h2{
+    padding: 4%;
+  }
+}
+.gallery-img{
+    width: 270px;
+    height: 150px;
+}
+.zoom {
+	transition: transform 0.35s;
+	width: 300px;
+	height: 200px;
+	margin-bottom: 40px;
+	margin-left: 30px;
+	margin-right: 30px;
+	filter: $filter-pic;
+	scale: 80%;
+	transform: rotate(5deg);
+	display: inline-block;
+	border: 1px solid #e9e7e7;
+	background-color: $primary-color;
+	padding: 15px 15px 60px 15px;
+	box-shadow: 5px 8px 10px $shadow-color;
+	&:hover {
+		transform: scale(150%);
+		filter: grayscale(0%);
+    padding: 0 auto;
+	}
+}
+
+// Utility Classes
+.container {
+  margin: auto;
+  max-width: 1300px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.small { font-size: 12px; }
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.btn-color {
+  background: $terciary-color;
+  border: none;
+  color: $text-color-light;
+}
+
+form {
+  label {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-control {
+    width: 100%;
+    padding: 7px 12px;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+  } //End form .form-control
+  .form-control-long{
+    @extend .form-control;
+    height: 5rem;
+  }
+} //End form
+
+
+#features {
+    padding: 80px 0;
+    h3 {
+      line-height: 1.2em;
+      font-weight: 200;
+      padding-bottom: 10px;
+    }
+    .features-row {
+      display: flex;
+      padding-bottom: 40px;
+      padding-top: 20px;
+      width: 100%;
+      &-content {
+        width: 50%;
+        padding-right: 40px;
+        padding-left: 40px;
+        p {
+          padding-top: 10px;
+          padding-bottom: 15px;
+        }
+      } //End #features .features-row &-content
+    } //End #features .features-row
+  } //End #features
+
+/** Contact **/
+#contact {
+  padding: 40px 0;
+  .wrapper {
+    display: flex;
+  }
+  .contact-text {
+    color: #FFF;
+    width: 70%;
+    padding-right: 30px;
+    p {
+      padding-bottom: 20px;
+      color: $text-color-light;
+    }
+  } //End #landing-page .landing-page-text
+  .contact-form {
+    width: 60%;
+    background: #FFF;
+    padding: 40px 30px;
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+      font-weight: 600;
+    }
+    label{
+      font-size: 1.7rem;
+    }
+  } //End #landing-page .landing-page-text
+} //End #landing-page
+
+/*Social Icons*/ 
+.social{
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+}
+.social-box{
+  margin: 5% 10% 0 10%;
+}
+.social-link{
+  margin: 3%;
+}
+
+/* Footer */
+#mainfooter {
+    background: $terciary-color;
+    text-align: center;
+    padding:30px;
+  }
+
+@import 'mobile';

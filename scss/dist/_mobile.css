@@ -1,0 +1,13 @@
+@media (max-width: 700px) {
+  /** Landing Page **/
+  #landing-page .wrapper {
+    flex-wrap: wrap;
+  }
+  #landing-page .landing-page-text {
+    width: 100%;
+    padding-right: 0px;
+  }
+  #landing-page .landing-page-form {
+    width: 100%;
+  }
+}
