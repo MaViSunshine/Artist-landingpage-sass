@@ -24,8 +24,9 @@
       </nav>            
   </header>
 
+<main>
 
-  <section class="wrapper main-section" id="mainheader" style="background: url(img/154.png); background-size: cover">
+  <section class="wrapper main-section" id="mainheader">
     <div id="showcase">
       <div class="container main-text">
         <h1 class="title title-main">Hi, I'm Ann White!</h1>
@@ -37,7 +38,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- SERVICES -->
   <div class="wrapper">
     <section class="services">
@@ -47,34 +48,43 @@
             <p>Classes are also available in many forms, if you wish to learn to paint.</p>
             <p>Please contact me if you have any questions or follow me on social media and see what i'm working on.</p>
         </div>
-        <div class="service-type">
+        <div class="card-box">
+          <div class="service-type card-container">
             <div class="card">
-                <i class="fas fa-image"></i>
-                <h3>Digital Art</h3>
-                <p>I take Digital Art commissions. </p>
-                <p>Licenced for personal or commercial use.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Classes and Workshops</h3>
-                <p> Want to learn how to make your own art?</p>
-                <p>I can teach you how!</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Tradicional Art Pieces</h3>
-                <p>
-                    Custom pieces for your home or business. You can also buy from my catalogue.
-                </p>
-            </div>
+                  <i class="fas fa-image"></i>
+                  <div class="card-text">
+                    <h3>Digital Art</h3>
+                    <p>I take Digital Art commissions. </p>
+                    <p>Licenced for personal or commercial use.</p>
+                  </div>
+              </div>
+              <div class="card">
+                  <i class="fas fa-graduation-cap"></i>
+                  <div class="card-text">
+                    <h3>Classes and Workshops</h3>
+                    <p> Want to learn how to make your own art?</p>
+                    <p>I can teach you how!</p>
+                  </div>
+              </div>
+              <div class="card">
+                  <i class="fas fa-paint-brush"></i>
+                  <div class="card-text"></div>
+                    <h3>Tradicional Art Pieces</h3>
+                    <p> Custom pieces for your home or business.</p> 
+                    <p>You can also buy from my catalogue.</p>
+                  </div>  
+              </div>
+          </div>
         </div>
     </section>
 </div>
 
+
+
 <!-- ABOUT -->
 
 <section id="about" class="flex-section about bg-color">
-  <div class="flex-item2">
+  <div class="flex-item2 about-imgbox">
     <img src="img/4536.png" class="about-img" alt="caratula">
   </div>
   <div class="flex-item1 about-text">
@@ -91,16 +101,16 @@
 <!-- PRESENTATION -->
 
 <section class="flex-section presentation">
-  <div class="flex-item1">
-      <h2 class="title">My artistic style</h2>
-      <p> Most of my pieces are colorful abstract paintings with lots of texture (but I also make pieces in other styles upon request). </p>
+  <div class="flex-item1 pres-text">
+    <h2 class="title">My artistic style</h2>
+    <p> Most of my pieces are colorful abstract paintings with lots of texture (but I also make pieces in other styles upon request). </p>
       <p> I enjoy the results of that style, as due to shadows and pareidolia, it looks different acording to placing and the interpretation of the beholder. </p>
       <div>
           <button class="btn btn-color" type ="submit">CONTACT ME</button>
+        </div>
       </div>
-  </div>
-  <div class="flex-item2">
-      <img src="img/811.png" alt="caratula">
+  <div class="flex-item2 pres-img">
+      <img src="img/811.png" class="ps-img" alt="caratula">
   </div>
 </section>
 
@@ -110,9 +120,9 @@
       <div class="zoom">
            <img class="gallery-img" src="img/128.png" load="lazy" alt="1">
            <p>one</p>
-      </div>
-      <div class="zoom">
-           <img class="gallery-img" src="img/132.png" load="lazy" alt="2">
+          </div>
+          <div class="zoom">
+            <img class="gallery-img" src="img/132.png" load="lazy" alt="2">
            <p>two</p>
       </div>
       <div class="zoom">
@@ -122,10 +132,10 @@
       <div class="zoom">
           <img class="gallery-img" src="img/154.png" load="lazy" alt="4">
           <p>four</p>
-       </div>
-       <div class="zoom">
-            <img class="gallery-img" src="img/168.png" load="lazy" alt="5">
-            <p>five</p>
+        </div>
+        <div class="zoom">
+          <img class="gallery-img" src="img/168.png" load="lazy" alt="5">
+          <p>five</p>
        </div>
        <div class="zoom">
             <img class="gallery-img" src="img/169.png" load="lazy" alt="6">
@@ -176,10 +186,10 @@
     </div>
   </section> 
   
-  <section id="contact" class="bg-color">
-    <div class="container wrapper">
-      <div class="contact-text">
-        <div class="container">
+  <section id="contact" class="bg-color contact>
+    <div class="container wrapper flex-section">
+      <div class="contact-text flex-item1>
+        <div class="contact-container">
           <h1 class="title">Do you have any questions? <br> You're in luck!</h1>
           <p>Use the form to contact me. </p>
           <p>I'm also on the following social media platforms. Follow me!</p>
@@ -192,7 +202,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-form">
+      <div class="contact-form flex-item2">
         <h2 class="title">Thank you for your interest</h2>
         <form action="">
           <div class="form-group">
@@ -223,6 +233,8 @@
       </div>    
     </div>
   </section>
+
+</main>
 
   <section id="mainfooter">
     <div class="container">

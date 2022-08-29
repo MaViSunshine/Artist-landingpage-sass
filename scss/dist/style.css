@@ -23,7 +23,7 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  color: rgb(134, 132, 132);
+  color: #868484;
 }
 
 img {
@@ -42,7 +42,7 @@ nav, .services, .presentation, .footer-content {
 
 p {
   font-size: 1.8rem;
-  color: rgb(134, 132, 132);
+  color: #868484;
 }
 
 h2 {
@@ -75,7 +75,7 @@ h3 {
 }
 
 .btn-secondary {
-  background-color: rgb(134, 132, 132);
+  background-color: #868484;
 }
 
 * {
@@ -586,7 +586,7 @@ form .form-control-long {
 
 /*Social Icons*/
 .social {
-  color: hsl(0deg, 0%, 100%);
+  color: white;
   font-size: 4rem;
 }
 
@@ -623,4 +623,4 @@ form .form-control-long {
   #landing-page .landing-page-form {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+}

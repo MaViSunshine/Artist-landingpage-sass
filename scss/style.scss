@@ -16,6 +16,7 @@ $text-color-dark:  #000000;
 
 $filter-pic: grayscale(90%) invert(15%);
 
+
 // Reset
 * {
   padding: 0;
@@ -24,12 +25,16 @@ $filter-pic: grayscale(90%) invert(15%);
 }
 
 // General Styling
-// General Styling
+
 html,
 body {
   font-family: $font-stack;
   line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+body{
+  max-width: 100%;
 }
 
 h3 { font-size: 2.8rem; }
@@ -74,7 +79,7 @@ header{
 // Example Nesting
 
 nav{
-  @include container-flex(space-between, center, nowrap);
+  @include container-flex-nav(space-between, center, nowrap);
   background-color: $terciary-color;
   height: 25px;
   width: 100%;
@@ -104,24 +109,42 @@ nav{
   background-color: $secondary-color;
 }
 // MAIN
+
 .main-section {
-//  css for background img didnt worked (dkw), so i put it inline
+  margin: 0 auto;
+  background: url(/img/154.png);
+  background-size: cover;
   background-position: center;
-  height: 600px;
+  height: auto;
   color: $primary-color;
   text-align: center;
   padding: 15% 5%;
+  @media screen and (max-width: 580px) {
+    margin-top: 3%;
+    padding: 15% 0;
+    width: 100vw;
+    margin-right: 0%;
+  }
 }
 .main-text{
   background-color: $shadow-color;
   background: repeating-radial-gradient(circle, transparent, transparent 3.5px, #fb8686 3.5px, #fb8686 4.5px), repeating-radial-gradient(circle, transparent, transparent 3.5px, #f47585 3.5px, #f47585 4.5px), #f8b1b1;
-background-size: 20px 20px;
-background-position: 0 0, 10px 10px, 20px 10px;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px, 20px 10px;
   opacity: 95%;
   padding: 10% 3%;
   width: 50%;
   height: auto;
   border-radius: 5px 5px;
+  @media screen and (max-width: 990px){
+    min-width: 400px;
+    h1 {font-size: 3rem;}
+    h3 {font-size: 2rem;}
+  }
+  @media screen and (max-width: 580px) {
+    margin-top: 3%;
+    min-width: 300px;
+  }
 
 }
 
@@ -135,24 +158,35 @@ background-position: 0 0, 10px 10px, 20px 10px;
 .title-main{
   font-size: 5rem;
 }
-// CARD
+
 
 .card{
-  width: 300px;
+  width: 30%;
+  min-width: 300px;
   background-color: $secondary-color;
   border-radius: 7%;
-  margin: -3% 5%;
   padding: 2%;
+  margin: 1% 4%;
+  @media screen and (max-width:1075px) {
+    margin: 1%; 
+  }
+  @media screen and (max-width:920px) {
+   margin: 3% auto;
+  }
   i{
     padding: 10% 5%;
   }
-
+  
   h3{
     font-size: 2rem;
-    color: $text-color-light;
+    color: $text-color-light; 
   }
 }
-
+.service-title{
+  @media screen and (max-width: 990px) {
+    max-width: 80%;
+  }
+}
 .service-type{
   :hover{ 
     background-image: $gradient;
@@ -167,15 +201,16 @@ background-position: 0 0, 10px 10px, 20px 10px;
 .presentation{
     
   padding-top: 6%;
- margin-bottom: 3%;
+  margin-bottom: 3%;
   
   .flex-item2{
-      text-align: right;
+   text-align: right;
   }
   
   h2{
     margin-bottom: 10%;
     width: 150%;
+    text-align: left;
   }
 
   p{
@@ -183,10 +218,12 @@ background-position: 0 0, 10px 10px, 20px 10px;
       width: 100%;
       padding-right: 10px;
       padding-bottom: 10%;
+      text-align: left;
   }
   .flex-item1{
     width: 80%;
   }
+
 }
 
 // Services
@@ -215,9 +252,19 @@ background-position: 0 0, 10px 10px, 20px 10px;
 
 .about{
   padding: 3% 10%;
+  @media all and (max-width:950px) {
+    margin: 0 auto;
+    padding: 5%;
+  }
+}
+.about-imgbox{
+  @media all and (max-width:750px) {
+    max-width: 300px;
+    margin: 4% auto;
+  }
 }
 .about-img{
-  width: 400px;
+  max-width: 400px;
   height: auto;
   border: 10px solid $terciary-color;
   box-shadow: -10px 10px 10px $shadow-color;
@@ -226,16 +273,59 @@ background-position: 0 0, 10px 10px, 20px 10px;
   &:hover{
     border-radius: 50%;
   }
+  @media screen and (max-width: 700px) {
+    margin: 0 auto;
+  }
 }
 
 .about-text{
-  // padding: 0 10%;
   margin: -4% 4%;
   text-align: right;
   width: 70%;
   color: $text-color-light;
   p{ color: $text-color-light;
     margin: 3% 0;
+  }
+  @media all and (max-width:700px) {
+    width: 100%;
+    margin-top: 3%;
+    p, h2{
+      text-align: center;
+      padding: 1%;
+      margin-top: 2%;
+    }
+  }
+}
+
+// Presentation
+.presentation{
+  margin: 0 auto;
+  text-align: center;
+}
+.pres-text{
+  @media all and (max-width:970px) {
+    width: 100%;
+    margin-left: 10%;
+    padding: 2%;
+    text-align: center;
+  }
+  h2{
+    @media all and (max-width:970px) {
+      
+      margin-left: -25%;
+      padding: 2%;
+      text-align: center;
+    }
+
+  }
+}
+.pres-img{
+  img{
+    @media all and (max-width:970px) {
+      width: 100%;
+      margin: 3% auto;
+      padding: 2% 0;
+    }
   }
 }
 
@@ -338,33 +428,64 @@ form {
         width: 50%;
         padding-right: 40px;
         padding-left: 40px;
-        p {
+      }
+      p {
           padding-top: 10px;
           padding-bottom: 15px;
         }
+      p, h3{
+        @media screen and (max-width:750px){
+          display: block;
+          &-content{
+            width: 100%;
+          }
+        } 
+      }  
+      @media screen and (max-width:750px){
+        display: block;
+        &-content{
+          width: 100%;
+        }
+      }
       } //End #features .features-row &-content
     } //End #features .features-row
-  } //End #features
+    
+   //End #features
 
-/** Contact **/
-#contact {
-  padding: 40px 0;
-  .wrapper {
-    display: flex;
-  }
+  /** Contact **/
+  #contact {
+    padding: 3%;
+    @include container-flex(center, center, nowrap);
+    .wrapper {
+      display: flex;
+    }
+    @media screen and (max-width:920px){
+      display: block;
+      padding: 3%;
+    }
   .contact-text {
     color: #FFF;
-    width: 70%;
-    padding-right: 30px;
+    width: 80%;
+    padding-left: 30px;
+    margin: 2%;
+    @media screen and (max-width:920px){
+      text-align: center;
+      width: 100%;
+      padding-left: 0;
+    }
     p {
       padding-bottom: 20px;
       color: $text-color-light;
     }
   } //End #landing-page .landing-page-text
   .contact-form {
-    width: 60%;
+    width: 45%;
     background: #FFF;
     padding: 40px 30px;
+    margin: 0 5%;
+    @media screen and (max-width:920px){
+      width: 100%;
+    }
     h2 {
       padding-top: 20px;
       padding-bottom: 40px;
@@ -384,6 +505,10 @@ form {
 }
 .social-box{
   margin: 5% 10% 0 10%;
+  width: 100%;
+  @media  screen and (max-width: 920px) {
+    margin: 0 auto;
+  }
 }
 .social-link{
   margin: 3%;
@@ -397,3 +522,5 @@ form {
   }
 
 @import 'mobile';
+
+

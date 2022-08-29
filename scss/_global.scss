@@ -81,7 +81,6 @@ h3{
 }
 
 
-
 .btn-primary{
     @extend .btn;
     color: #fff;
@@ -93,9 +92,20 @@ h3{
     background-color:rgb(134, 132, 132);
 }
 
-// MIXINS SASS; 
+// MIXINS FLEX SASS; 
 
 @mixin container-flex($main, $crossed, $wrap){
+    display: flex;
+    justify-content: $main;
+    align-items: $crossed;
+    flex-wrap: $wrap;
+
+    @media screen and (max-width:950px){
+        display: block;
+    }
+}
+
+@mixin container-flex-nav($main, $crossed, $wrap){
     display: flex;
     justify-content: $main;
     align-items: $crossed;
